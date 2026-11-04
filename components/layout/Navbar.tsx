@@ -4,8 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { LuMenu, LuX } from "react-icons/lu";
+import { authClient } from "@/lib/auth-client";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
+import { UserMenu } from "./UserMenu";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -15,6 +17,7 @@ const NAV_LINKS = [
 export function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { data: session, isPending, refetch } = authClient.useSession();
 
   return (
     <header className="site-header">
@@ -43,6 +46,15 @@ export function Navbar() {
           </nav>
           <div className="nav-actions">
             <ThemeToggle />
+            {isPending ? (
+              <span aria-hidden="true" className="nav-avatar-placeholder" />
+            ) : session ? (
+              <UserMenu image={session.user.image} name={session.user.name} onLoggedOut={() => refetch()} />
+            ) : (
+              <Link className="btn btn-primary btn-small" href="/login">
+                Login
+              </Link>
+            )}
             <button
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
