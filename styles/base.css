@@ -74,3 +74,24 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  border-color: var(--indigo);
+}
+
+.dark .icon-btn:hover {
+  border-color: var(--marigold);
+}

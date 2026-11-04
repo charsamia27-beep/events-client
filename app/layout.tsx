@@ -4,6 +4,7 @@ import "@fontsource-variable/nunito";
 import "@fontsource-variable/quicksand";
 import "@fontsource/galada";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: { default: "Pashe | Community service events near you", template: "%s | Pashe" },
@@ -12,8 +13,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
