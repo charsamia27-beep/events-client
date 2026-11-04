@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import "@fontsource-variable/nunito";
 import "@fontsource-variable/quicksand";
 import "@fontsource/galada";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -15,7 +17,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
