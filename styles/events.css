@@ -1,0 +1,251 @@
+.page {
+  padding-block: 44px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+@media (max-width: 960px) {
+  .event-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .event-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.event-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  background: linear-gradient(150deg, var(--indigo), var(--river-to));
+  color: rgb(255 255 255 / 0.75);
+}
+
+.event-type {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--marigold-bright);
+  color: var(--indigo-deep);
+  font-size: 0.8125rem;
+  font-weight: 800;
+}
+
+.event-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+}
+
+.event-title {
+  display: -webkit-box;
+  min-height: 2.5em;
+  overflow: hidden;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.event-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.event-meta svg {
+  flex: none;
+  margin-top: 0.3em;
+  color: var(--marigold);
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+/* Filters */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  width: min(620px, 100%);
+  margin: 0 auto 14px;
+}
+
+.filter-search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding-inline: 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.filter-search:focus-within {
+  border-color: var(--accent);
+}
+
+.filter-search input {
+  flex: 1;
+  min-width: 0;
+  min-height: 40px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  outline: 0;
+}
+
+.type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.type-filter {
+  padding: 4px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.type-filter:hover {
+  border-color: var(--marigold);
+}
+
+.type-filter[aria-current="true"] {
+  border-color: var(--indigo);
+  background: var(--indigo);
+  color: #fff;
+}
+
+.dark .type-filter[aria-current="true"] {
+  border-color: var(--marigold-bright);
+  background: var(--marigold-bright);
+  color: var(--indigo-deep);
+}
+
+/* Empty, error and blocked states */
+.state-panel {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  width: min(560px, 100%);
+  margin: 12px auto;
+  padding: 36px 20px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: center;
+}
+
+.state-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.state-text {
+  max-width: 46ch;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+/* Skeletons */
+.skeleton {
+  display: block;
+  border-radius: 8px;
+}
+
+.skeleton-media {
+  aspect-ratio: 16 / 10;
+  border-radius: 0;
+}
+
+.skeleton-line {
+  width: 70%;
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.skeleton-line-wide {
+  width: 90%;
+  height: 20px;
+}
+
+.skeleton-button {
+  width: 120px;
+  height: 38px;
+  margin-top: 10px;
+  border-radius: 999px;
+}
+
+.skeleton-detail-media {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 18px;
+  border-radius: var(--radius);
+}
+
+.skeleton-panel {
+  height: 300px;
+  border-radius: var(--radius);
+}
