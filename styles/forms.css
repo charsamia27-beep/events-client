@@ -293,3 +293,9 @@
   color: var(--muted);
   overflow-wrap: anywhere;
 }
+
+/* Confirmation dialog */
+.confirm-dialog {
+  background: var(--surface);
+  color: var(--ink);
+}
