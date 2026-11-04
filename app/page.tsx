@@ -2,9 +2,14 @@ import { Suspense } from "react";
 import { EventGridSkeleton } from "@/components/events/EventSkeletons";
 import { About } from "@/components/home/About";
 import { Banner } from "@/components/home/Banner";
+import { Causes } from "@/components/home/Causes";
 import { Features } from "@/components/home/Features";
+import { Gallery } from "@/components/home/Gallery";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { Newsletter } from "@/components/home/Newsletter";
 import { Promise as OurPromise } from "@/components/home/Promise";
 import { RecentEvents } from "@/components/home/RecentEvents";
+import { Slogan } from "@/components/home/Slogan";
 import { StatsBand } from "@/components/home/StatsBand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -32,6 +37,11 @@ export default function HomePage() {
           </Suspense>
         </div>
       </section>
+      <Causes />
+      <Slogan />
+      <HowItWorks />
+      <Gallery />
+      <Newsletter />
     </>
   );
 }
