@@ -1,0 +1,48 @@
+:root {
+  --font-head: "Quicksand Variable", "Trebuchet MS", sans-serif;
+  --font-body: "Nunito Variable", "Segoe UI", sans-serif;
+  --font-bangla: "Galada", "Noto Sans Bengali", sans-serif;
+
+  --ink: #1e2148;
+  --muted: #565a7a;
+  --paper: #fbfbfe;
+  --surface: #ffffff;
+  --line: #e1e3f1;
+  --indigo: #252a86;
+  --indigo-deep: #1b1f69;
+  --on-indigo: #f2f3ff;
+  --on-indigo-muted: #c9cbf0;
+  --marigold: #b86405;
+  --marigold-bright: #f7b64f;
+  --river-from: #256aa8;
+  --river-to: #3079bb;
+  --leaf: #12804a;
+  --danger: #bb2a36;
+  --shadow: 0 10px 28px rgb(37 42 134 / 0.1);
+  --radius: 14px;
+
+  /* HeroUI reads these, so its focus rings and menus match the brand. */
+  --accent: #252a86;
+  --accent-foreground: #ffffff;
+  --focus: #252a86;
+}
+
+.dark {
+  --ink: #eceefb;
+  --muted: #aeb2d6;
+  --paper: #0f1130;
+  --surface: #191c48;
+  --line: #2f336d;
+  --indigo: #1d2170;
+  --indigo-deep: #14174f;
+  --marigold: #f7b64f;
+  --river-from: #1f5a92;
+  --river-to: #2869a6;
+  --leaf: #17985a;
+  --danger: #ff7b86;
+  --shadow: 0 10px 28px rgb(0 0 0 / 0.35);
+
+  --accent: #9ea4ff;
+  --accent-foreground: #14174f;
+  --focus: #9ea4ff;
+}
