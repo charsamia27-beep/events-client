@@ -1,0 +1,204 @@
+/* Buttons: one style across the whole site, on links and on HeroUI buttons. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  height: auto;
+  padding: 9px 24px;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--indigo);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--indigo-deep);
+}
+
+.dark .btn-primary {
+  background: var(--marigold-bright);
+  color: var(--indigo-deep);
+}
+
+.dark .btn-primary:hover {
+  background: #fbc873;
+}
+
+.btn-marigold {
+  background: var(--marigold-bright);
+  color: var(--indigo-deep);
+}
+
+.btn-marigold:hover {
+  background: #fbc873;
+}
+
+.btn-outline {
+  border-color: currentcolor;
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-outline:hover {
+  color: var(--marigold);
+}
+
+.btn-danger {
+  border-color: var(--danger);
+  background: transparent;
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+.dark .btn-danger:hover {
+  color: #14174f;
+}
+
+.btn-danger-solid {
+  background: #bb2a36;
+  color: #fff;
+}
+
+.btn-danger-solid:hover {
+  background: #9f1f2b;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn[disabled],
+.btn[data-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Form fields */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.field-label {
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.field-input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  box-shadow: none;
+}
+
+.field-input::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.field-input:focus {
+  border-color: var(--accent);
+  outline: 2px solid var(--focus);
+  outline-offset: 0;
+}
+
+.field-textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.dark input[type="datetime-local"] {
+  color-scheme: dark;
+}
+
+.field-hint {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.field-error {
+  color: var(--danger);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* Auth pages */
+.auth-page {
+  display: grid;
+  place-items: center;
+  padding-block: 48px 8px;
+}
+
+.auth-card {
+  width: min(460px, 100%);
+  padding: 32px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.auth-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.auth-lead {
+  margin-block: 6px 22px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-switch {
+  color: var(--muted);
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--marigold);
+  font-weight: 800;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--line);
+}
