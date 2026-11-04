@@ -52,7 +52,7 @@ export const eventFormSchema = z.object({
     .trim()
     .min(20, "Description needs at least 20 characters")
     .max(2000, "Description can have up to 2000 characters"),
-  eventType: z.enum(EVENT_TYPES, { errorMap: () => ({ message: "Choose an event type" }) }),
+  eventType: z.enum(EVENT_TYPES, { error: "Choose an event type" }),
   thumbnail: z
     .string()
     .trim()
