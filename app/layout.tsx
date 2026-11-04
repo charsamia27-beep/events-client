@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import { type ReactNode, Suspense } from "react";
 import "@fontsource-variable/nunito";
 import "@fontsource-variable/quicksand";
 import "@fontsource/galada";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { WelcomeToast } from "@/components/layout/WelcomeToast";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -21,6 +22,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Suspense>
+            <WelcomeToast />
+          </Suspense>
         </Providers>
       </body>
     </html>
