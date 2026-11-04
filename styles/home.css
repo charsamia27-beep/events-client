@@ -38,6 +38,7 @@
 
 /* Hero */
 .hero {
+  display: flow-root; /* keeps the carousel's negative margin inside the band */
   padding-top: 40px;
   background:
     radial-gradient(70% 90% at 12% 10%, rgb(255 255 255 / 0.07), transparent 70%),
@@ -63,6 +64,7 @@
 
 .hero-stage {
   position: relative;
+  z-index: 1;
   width: min(1000px, 100%);
   margin: 0 auto -84px;
 }

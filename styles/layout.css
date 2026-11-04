@@ -319,12 +319,38 @@
   font-size: 0.875rem;
 }
 
-@media (max-width: 400px) {
-  .btn-small {
+.header-theme {
+  display: inline-flex;
+}
+
+.mobile-theme {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  font-weight: 700;
+}
+
+/* On the narrowest phones the theme toggle moves into the menu, so the row still fits. */
+@media (max-width: 430px) {
+  .header-theme {
+    display: none;
+  }
+
+  .mobile-theme {
+    display: flex;
+  }
+
+  .nav-actions .btn-small {
     padding-inline: 12px;
   }
 
-  .logo-word {
-    font-size: 1.375rem;
+  .logo svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo .logo-word {
+    font-size: 1.25rem;
   }
 }

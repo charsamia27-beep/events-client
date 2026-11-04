@@ -10,7 +10,7 @@ export default async function ProfilePage() {
 
   return (
     <div className="container page">
-      <SectionHeading accent="Profile" accentFirst={false} as="h1" plain="My" />
+      <SectionHeading accent="Profile" as="h1" plain="My" />
       <ProfileForm email={user.email} image={user.image ?? ""} name={user.name} />
     </div>
   );

@@ -7,7 +7,7 @@ import { Features } from "@/components/home/Features";
 import { Gallery } from "@/components/home/Gallery";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { Newsletter } from "@/components/home/Newsletter";
-import { Promise as OurPromise } from "@/components/home/Promise";
+import { OurPromise } from "@/components/home/OurPromise";
 import { RecentEvents } from "@/components/home/RecentEvents";
 import { Slogan } from "@/components/home/Slogan";
 import { StatsBand } from "@/components/home/StatsBand";

@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { PROMISE_IMAGE } from "@/lib/images";
 
-export function Promise() {
+export function OurPromise() {
   return (
     <section className="section">
       <div className="container split split-reverse">

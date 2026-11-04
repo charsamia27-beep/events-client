@@ -45,7 +45,9 @@ export function Navbar() {
             ))}
           </nav>
           <div className="nav-actions">
-            <ThemeToggle />
+            <span className="header-theme">
+              <ThemeToggle />
+            </span>
             {isPending ? (
               <span aria-hidden="true" className="nav-avatar-placeholder" />
             ) : session ? (
@@ -79,6 +81,10 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="mobile-theme">
+              <span>Theme</span>
+              <ThemeToggle />
+            </div>
           </nav>
         )}
       </div>
