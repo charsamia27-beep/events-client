@@ -249,3 +249,47 @@
 .btn[data-pending="true"] {
   opacity: 0.7;
 }
+
+/* Profile */
+.profile-card {
+  width: min(560px, 100%);
+  margin-inline: auto;
+  padding: 26px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.profile-photo {
+  flex: none;
+  width: 84px;
+  height: 84px;
+  min-height: 84px;
+  border: 3px solid var(--marigold);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-id {
+  min-width: 0;
+}
+
+.profile-name {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.profile-email {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
