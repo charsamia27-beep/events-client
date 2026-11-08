@@ -20,6 +20,7 @@ export const auth = betterAuth({
   database: mongodbAdapter(db, uri.startsWith("mongodb+srv") ? { client } : undefined),
   // The brief allows 6-character passwords. The form checks the letter rules.
   emailAndPassword: { enabled: true, minPasswordLength: 6 },
+    account: { accountLinking: { enabled: true, trustedProviders: ["google"] } },
   socialProviders:
     googleId && googleSecret
       ? { google: { clientId: googleId, clientSecret: googleSecret } }
