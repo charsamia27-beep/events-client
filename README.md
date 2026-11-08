@@ -1,10 +1,10 @@
 # Pashe
 
-**Live site:** https://YOUR-SITE.vercel.app
+**Live site:** https://pashe-events.vercel.app
 
 Pashe (পাশে, "beside you") is a community service events platform. People create, find, join and track social service events in their local area, such as cleanups, plantations and blood drives.
 
-**API repository:** https://github.com/YOUR-USERNAME/events-server
+**API repository:** https://github.com/charsamia27-beep/events-server
 
 ## Features
 
@@ -32,7 +32,7 @@ Use the same MongoDB database for both apps. Keep `BETTER_AUTH_URL` here identic
 ## Deploy on Vercel
 
 1. Import this repository and add every variable from `.env.example`, using your live URLs.
-2. In Google Cloud, add `https://YOUR-SITE.vercel.app/api/auth/callback/google` as a redirect URI, and publish the consent screen.
+2. In Google Cloud, add `https://pashe-events.vercel.app/api/auth/callback/google` as a redirect URI, and publish the consent screen.
 3. Set `CLIENT_URL` on the server to the same site URL, then redeploy both apps.
 
 ## Photo credits
