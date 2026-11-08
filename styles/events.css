@@ -331,3 +331,9 @@
   color: var(--muted);
   font-size: 0.875rem;
 }
+
+.legal-text {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
